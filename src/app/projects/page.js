@@ -114,35 +114,33 @@ export default function Projects() {
               className="group"
             >
               <div
-                className="rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 hover:scale-105 
-                bg-[#E0E0E0] dark:bg-[#1E1E1E] border border-[#F5F5F5] dark:border-[#2B2B2B] h-[32rem] flex flex-col"
+                className="rounded-lg shadow-md hover:shadow-xl transition-transform duration-300 hover:scale-105 bg-gradient-to-b from-[#E0E0E0] to-[#D6D6D6] dark:from-[#1E1E1E] dark:to-[#292929] 
+                border border-gray-300 dark:border-gray-700 h-[32rem] flex flex-col overflow-hidden"
               >
                 {/* Image */}
-                <div className="relative w-full h-72">
+                <div className="relative w-full h-64">
                   <Image
                     src={project.image}
                     alt={project.title}
                     layout="fill"
                     objectFit="cover"
-                    className="rounded-t-lg"
+                    className="group-hover:brightness-90 transition rounded-t-lg"
                   />
                 </div>
 
                 {/* Text Content */}
-                <div className="p-4 flex flex-col flex-grow justify-between">
-                  <div>
-                    <h2 className="text-xl font-bold text-gray-800 dark:text-[#D0D0D0] mb-2">
-                      {project.title}
-                    </h2>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                      {project.description}
-                    </p>
-                    <div className="text-sm text-gray-500 dark:text-gray-400">
-                      <strong>Technologies:</strong> {project.technologies.join(", ")}
-                    </div>
+                <div className="p-6 flex flex-col flex-grow">
+                  <h2 className="text-xl font-bold text-gray-800 dark:text-[#D0D0D0] mb-4 group-hover:underline">
+                    {project.title}
+                  </h2>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                    {project.description}
+                  </p>
+                  <div className="text-sm text-gray-500 dark:text-gray-400 flex-grow">
+                    <strong>Technologies:</strong> {project.technologies.join(", ")}
                   </div>
                   {project.link && (
-                    <div className="text-center group-hover:shadow-md group-hover:text-[#444444] dark:group-hover:text-[#D0D0D0] group-hover:dark:shadow-lg transition-all duration-300 mt-4">
+                    <div className="mt-4 text-center text-gray-800 dark:text-[#D0D0D0] group-hover:text-[#444444] dark:group-hover:text-[#E0E0E0] transition-colors">
                       Click to view on GitHub
                     </div>
                   )}
