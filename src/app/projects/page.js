@@ -1,4 +1,9 @@
 "use client";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import Image from "next/image";
 
 export default function Projects() {
@@ -69,83 +74,75 @@ export default function Projects() {
       technologies: ["Python", "Matplotlib"],
       link: "https://github.com/saisreenadh/3D-Brain",
     },
-    {
-      title: "AI Nutrition App",
-      description:
-        "Provides personalized dietary advice using AI, collecting preferences for tailored health recommendations.",
-      image: "/images/ainutritionapp.jpg",
-      technologies: ["Python", "Google Vertex AI"],
-      link: "https://github.com/saisreenadh/AI-Nutrition-App",
-    },
-    {
-      title: "License Plate Sorter",
-      description:
-        "Efficiently manages car registration data, sorts it by expiration date, and flags expiring registrations.",
-      image: "/images/licenseplatesorter.jpg",
-      technologies: ["Java"],
-      link: "https://github.com/saisreenadh/License-Plate-Sorter",
-    },
-    {
-      title: "2048 Game",
-      description:
-        "A stylish 2048 game built with Java and Swing! Slide tiles, combine them, and reach the 2048 tile.",
-      image: "/images/2048game.jpg",
-      technologies: ["Java", "Swing"],
-      link: "https://github.com/saisreenadh/2048-Game",
-    },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-teal-100 text-gray-800 py-16">
+    <div className="min-h-screen bg-[#F5F5F5] dark:bg-[#2B2B2B] py-16">
       <div className="max-w-6xl mx-auto px-4">
         {/* Title */}
-        <h1 className="text-5xl font-extrabold text-teal-600 text-center mb-12">
+        <h1 className="text-5xl font-extrabold text-gray-800 dark:text-[#D0D0D0] text-center mb-12">
           Some of My Projects
         </h1>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {/* Swiper Carousel */}
+        <Swiper
+          modules={[Navigation, Pagination]}
+          navigation
+          pagination={{ clickable: true }}
+          spaceBetween={20}
+          slidesPerView={1}
+          breakpoints={{
+            768: { slidesPerView: 2 }, // Show 2 slides on medium screens
+            1024: { slidesPerView: 3 }, // Show 3 slides on large screens
+          }}
+        >
           {projects.map((project, index) => (
-            <a
-              key={index}
-              href={project.link || "#"}
-              target={project.link ? "_blank" : "_self"}
-              rel="noopener noreferrer"
-              className="group"
-            >
-              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-2xl hover:scale-105 transition-transform duration-300 relative h-[30rem]">
-                {/* Image */}
-                <div className="relative w-full h-56">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-t-lg"
-                  />
-                </div>
-
-                {/* Text Content */}
-                <div className="p-6 flex flex-col h-[calc(100%-14rem)] justify-between">
-                  <div>
-                    <h2 className="text-xl font-bold text-gray-800 mb-2">
-                      {project.title}
-                    </h2>
-                    <p className="text-gray-600 text-sm mb-4">{project.description}</p>
-                    <div className="text-sm text-gray-500">
-                      <strong>Technologies:</strong> {project.technologies.join(", ")}
-                    </div>
+            <SwiperSlide key={index}>
+              <a
+                href={project.link || "#"}
+                target={project.link ? "_blank" : "_self"}
+                rel="noopener noreferrer"
+                className="group"
+              >
+                <div
+                  className="rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 hover:scale-105 
+                  bg-[#E0E0E0] dark:bg-[#1E1E1E] border border-[#F5F5F5] dark:border-[#2B2B2B] flex flex-col"
+                >
+                  {/* Image */}
+                  <div className="relative w-full h-56">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded-t-lg"
+                    />
                   </div>
-                  {project.link && (
-                    <div className="mt-4 text-center text-gray-600 group-hover:text-teal-600 transition-colors">
-                      Click to view on GitHub
+
+                  {/* Text Content */}
+                  <div className="p-4 flex flex-col flex-grow justify-between">
+                    <div>
+                      <h2 className="text-xl font-bold text-gray-800 dark:text-[#D0D0D0] mb-2">
+                        {project.title}
+                      </h2>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                        {project.description}
+                      </p>
+                      <div className="text-sm text-gray-500 dark:text-gray-400">
+                        <strong>Technologies:</strong> {project.technologies.join(", ")}
+                      </div>
                     </div>
-                  )}
+                    {project.link && (
+                      <div className="text-center group-hover:text-[#444444] dark:group-hover:text-[#D0D0D0] transition-colors duration-300 mt-4">
+                        Click to view on GitHub
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </a>
+              </a>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
     </div>
   );

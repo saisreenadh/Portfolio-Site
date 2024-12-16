@@ -1,87 +1,34 @@
 import "./globals.css";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import {
+  FaHome,
+  FaLayerGroup,
+  FaBriefcase,
+  FaUser,
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+} from "react-icons/fa";
+import ThemeToggle from "./components/ThemeToggle";
 
 export const metadata = {
   title: "Saisreenadh Yandapalli | Website",
   description:
     "Hi! I'm Saisreenadh (Sreenadh) Yandapalli, a Stanford CS student specializing in AI and Psychology. I'm passionate about leveraging technology to create meaningful impact!",
-  openGraph: {
-    title: "Saisreenadh Yandapalli | Website",
-    description:
-      "Hi! I'm Saisreenadh (Sreenadh) Yandapalli, a Stanford CS student specializing in AI and Psychology. I'm passionate about leveraging technology to create meaningful impact!",
-    images: [
-      {
-        url: "/images/hero-image.jpg", // Path to hero image for social sharing
-        width: 1200,
-        height: 630,
-        alt: "Hero Image for Saisreenadh Yandapalli Portfolio",
-      },
-    ],
-    type: "website",
-  },
 };
 
 export default function Layout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
-        <meta
-          name="description"
-          content="Hi! I'm Saisreenadh (Sreenadh) Yandapalli, a Stanford CS student specializing in AI and Psychology. I'm passionate about leveraging technology to create meaningful impact!"
-        />
-        <meta property="og:title" content="Saisreenadh Yandapalli | Website" />
-        <meta
-          property="og:description"
-          content="Hi! I'm Saisreenadh (Sreenadh) Yandapalli, a Stanford CS student specializing in AI and Psychology. I'm passionate about leveraging technology to create meaningful impact!"
-        />
-        <meta property="og:image" content="/images/hero-image.jpg" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://yourwebsite.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Saisreenadh Yandapalli | Website" />
-        <meta
-          name="twitter:description"
-          content="Hi! I'm Saisreenadh (Sreenadh) Yandapalli, a Stanford CS student specializing in AI and Psychology. I'm passionate about leveraging technology to create meaningful impact!"
-        />
-        <meta name="twitter:image" content="/images/hero-image.jpg" />
-      </head>
-      <body className="min-h-screen flex flex-col bg-gradient-to-b from-teal-100 to-blue-50 text-gray-800 overflow-x-hidden">
+      <body className="min-h-screen flex flex-col bg-background text-foreground">
         {/* Navigation Bar */}
-        <nav className="sticky top-0 bg-white shadow-md z-50">
-          <div className="flex flex-wrap items-center justify-between px-4 sm:px-8 py-4">
-            {/* Top-Left Tag */}
-            <div className="text-teal-600 font-bold text-lg sm:text-xl whitespace-nowrap">
-              Saisreenadh (Sreenadh) Yandapalli
-            </div>
-
-            {/* Navigation Links */}
-            <div className="space-x-4 sm:space-x-6 text-gray-800 font-medium">
-              <a href="/" className="hover:text-teal-500 transition-colors">
-                Home
-              </a>
-              <a
-                href="/projects"
-                className="hover:text-teal-500 transition-colors"
-              >
-                Projects
-              </a>
-              <a
-                href="/experience"
-                className="hover:text-teal-500 transition-colors"
-              >
-                Experience
-              </a>
-              <a
-                href="mailto:syandapalli89@gmail.com"
-                className="hover:text-teal-500 transition-colors"
-              >
-                Contact Me
-              </a>
+        <nav className="fixed md:top-1/2 md:right-6 md:transform md:-translate-y-1/2 z-50 flex justify-center md:justify-end">
+          <div className="flex flex-col items-center space-y-6 bg-[#E0E0E0] dark:bg-[#1E1E1E] bg-opacity-90 shadow-lg rounded-lg p-4">
+            <NavItem href="/" Icon={FaHome} label="Home" />
+            <NavItem href="/me" Icon={FaUser} label="Me" />
+            <NavItem href="/projects" Icon={FaLayerGroup} label="Projects" />
+            <NavItem href="/experience" Icon={FaBriefcase} label="Experience" />
+            <div className="flex items-center justify-center">
+              <ThemeToggle />
             </div>
           </div>
         </nav>
@@ -90,13 +37,13 @@ export default function Layout({ children }) {
         <main className="flex-grow">{children}</main>
 
         {/* Footer */}
-        <footer className="bg-gradient-to-r from-teal-300 to-blue-200 text-gray-800 py-8 text-center">
+        <footer className="bg-[#E0E0E0] dark:bg-[#1E1E1E] text-gray-800 dark:text-[#D0D0D0] py-8 text-center shadow-md">
           <div className="flex justify-center space-x-6 mb-4">
             <a
               href="https://github.com/saisreenadh"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-700 hover:text-teal-600 transition-colors"
+              className="hover:text-teal-400"
             >
               <FaGithub size={24} />
             </a>
@@ -104,23 +51,33 @@ export default function Layout({ children }) {
               href="https://www.linkedin.com/in/sreenadh-yandapalli/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-700 hover:text-teal-600 transition-colors"
+              className="hover:text-teal-400"
             >
               <FaLinkedin size={24} />
             </a>
-            <a
-              href="mailto:syandapalli89@gmail.com"
-              className="text-gray-700 hover:text-teal-600 transition-colors"
-            >
+            <a href="mailto:syandapalli89@gmail.com" className="hover:text-teal-400">
               <FaEnvelope size={24} />
             </a>
           </div>
           <p className="text-sm">
-            © 2024 Saisreenadh Yandapalli. Built with ❤️ using Next.js and
-            TailwindCSS.
+            © 2024 Saisreenadh Yandapalli. Built with ❤️ using Next.js and TailwindCSS.
           </p>
         </footer>
       </body>
     </html>
+  );
+}
+
+function NavItem({ href, Icon, label }) {
+  return (
+    <a
+      href={href}
+      className="relative group flex items-center justify-center bg-card-bg rounded-lg p-3 shadow-md hover:scale-105 transition-transform"
+    >
+      <Icon size={28} className="text-gray-800 dark:text-gray-200" />
+      <span className="absolute right-full mr-2 px-2 py-1 text-sm bg-gray-800 text-white rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">
+        {label}
+      </span>
+    </a>
   );
 }
