@@ -58,7 +58,7 @@ export default function Layout({ children }) {
                 <FaLinkedin size={24} />
               </a>
               <a
-                href="mailto:saisreenadh@stanford.edu"
+                href="mailto:syandapalli@stanford.edu"
                 className="hover:text-teal-400 dark:text-[#EAEAEA] transition-colors"
               >
                 <FaEnvelope size={24} />
