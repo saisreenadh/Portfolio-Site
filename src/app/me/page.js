@@ -46,7 +46,7 @@ export default function About() {
             href="https://github.com/saisreenadh"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-3 px-6 py-3 bg-[#E0E0E0] dark:bg-[#1E1E1E] rounded-lg shadow-md hover:shadow-lg transition-shadow"
+            className="flex items-center space-x-3 px-6 py-3 bg-[#E0E0E0] dark:bg-[#1E1E1E] rounded-lg shadow-md hover:shadow-2xl hover:scale-105 transform transition-transform duration-300"
           >
             <FaGithub size={28} className="text-gray-800 dark:text-[#D0D0D0]" />
             <span className="text-gray-800 dark:text-[#D0D0D0] font-semibold">GitHub</span>
@@ -57,7 +57,7 @@ export default function About() {
             href="https://www.linkedin.com/in/sreenadh-yandapalli/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-3 px-6 py-3 bg-[#E0E0E0] dark:bg-[#1E1E1E] rounded-lg shadow-md hover:shadow-lg transition-shadow"
+            className="flex items-center space-x-3 px-6 py-3 bg-[#E0E0E0] dark:bg-[#1E1E1E] rounded-lg shadow-md hover:shadow-2xl hover:scale-105 transform transition-transform duration-300"
           >
             <FaLinkedin size={28} className="text-gray-800 dark:text-[#D0D0D0]" />
             <span className="text-gray-800 dark:text-[#D0D0D0] font-semibold">LinkedIn</span>
@@ -66,7 +66,7 @@ export default function About() {
           {/* Email */}
           <a
             href="mailto:syandapalli89@gmail.com"
-            className="flex items-center space-x-3 px-6 py-3 bg-[#E0E0E0] dark:bg-[#1E1E1E] rounded-lg shadow-md hover:shadow-lg transition-shadow"
+            className="flex items-center space-x-3 px-6 py-3 bg-[#E0E0E0] dark:bg-[#1E1E1E] rounded-lg shadow-md hover:shadow-2xl hover:scale-105 transform transition-transform duration-300"
           >
             <FaEnvelope size={28} className="text-gray-800 dark:text-[#D0D0D0]" />
             <span className="text-gray-800 dark:text-[#D0D0D0] font-semibold">Email</span>

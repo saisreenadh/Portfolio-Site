@@ -40,7 +40,7 @@ export default function Home() {
               Saisreenadh (Sreenadh) Yandapalli
             </h1>
             <p className="text-sm md:text-base text-gray-700 dark:text-gray-400 mt-3">
-              Stanford CS & Psychology Student | Innovator | Problem Solver
+              Stanford CS & Psychology Student | Full Stack Developer | Wordle Enthusiast
             </p>
 
             {/* Buttons */}
