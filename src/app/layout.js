@@ -23,7 +23,7 @@ export default function Layout({ children }) {
       <body className="min-h-screen flex flex-col bg-background text-foreground">
         <ThemeProvider>
           {/* Navigation Bar */}
-          <nav className="fixed top-0 left-1/2 transform -translate-x-1/2 z-50 flex justify-center bg-top-dark shadow-lg rounded-lg p-4 bg-opacity-90 md:top-1/2 md:right-0 md:transform md:-translate-y-1/2 md:left-auto md:flex-col md:justify-center md:space-y-6">
+          <nav className="fixed top-0 left-1/2 transform -translate-x-1/2 z-50 flex justify-center bg-top-dark shadow-lg rounded-lg p-4 bg-opacity-90 space-x-4 md:space-x-0 md:top-1/2 md:right-0 md:transform md:-translate-y-1/2 md:left-auto md:flex-col md:justify-center md:space-y-6">
             <NavItem href="/" Icon={FaHome} label="Home" />
             <NavItem href="/me" Icon={FaUser} label="Me" />
             <NavItem href="/projects" Icon={FaLayerGroup} label="Projects" />
@@ -76,10 +76,11 @@ function NavItem({ href, Icon, label }) {
   return (
     <a
       href={href}
-      className="relative group flex items-center justify-center bg-card-bg rounded-lg p-3 shadow-md hover:scale-105 transition-transform"
+      className="relative group flex items-center justify-center bg-card-bg rounded-lg p-3 shadow-md hover:scale-105 transition-transform md:space-x-3"
     >
       <Icon size={28} className="text-gray-800 dark:text-[#EAEAEA]" />
-      <span className="absolute right-full mr-2 px-2 py-1 text-sm bg-gray-800 text-white rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">
+      {/* Hidden text on mobile */}
+      <span className="hidden md:block absolute right-full mr-2 px-2 py-1 text-sm bg-gray-800 text-white rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">
         {label}
       </span>
     </a>
