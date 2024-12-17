@@ -65,7 +65,7 @@ export default function About() {
 
           {/* Email */}
           <a
-            href="mailto:syandapalli89@gmail.com"
+            href="mailto:syandapalli@stanford.edu"
             className="flex items-center space-x-3 px-6 py-3 bg-[#E0E0E0] dark:bg-[#1E1E1E] rounded-lg shadow-md dark:shadow-[0_6px_8px_rgba(255,255,255,0.15)] hover:shadow-lg dark:hover:shadow-[0_8px_10px_rgba(255,255,255,0.2)] hover:scale-105 transform transition-transform duration-300"
           >
             <FaEnvelope size={28} className="text-gray-800 dark:text-[#D0D0D0]" />

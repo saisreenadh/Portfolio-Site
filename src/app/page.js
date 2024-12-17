@@ -53,7 +53,7 @@ export default function Home() {
                 View Projects
               </a>
               <a
-                href="mailto:syandapalli89@gmail.com"
+                href="mailto:syandapalli@stanford.edu"
                 className="px-5 py-2 bg-gray-500 text-white dark:text-gray-300 rounded-lg shadow-md dark:shadow-[0_4px_6px_rgba(255,255,255,0.1)] hover:bg-gray-600 transition-transform transform hover:scale-105"
               >
                 Contact Me
@@ -79,7 +79,7 @@ export default function Home() {
                 <FaLinkedin size={24} />
               </a>
               <a
-                href="mailto:syandapalli89@gmail.com"
+                href="mailto:syandapalli@stanford.edu"
                 className="text-gray-700 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-400 transition-colors"
               >
                 <FaEnvelope size={24} />
