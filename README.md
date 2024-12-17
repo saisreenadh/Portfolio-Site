@@ -1,1 +1,1 @@
-syandapall.com
+syandapalli.com
