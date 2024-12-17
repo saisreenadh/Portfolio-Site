@@ -23,7 +23,7 @@ export default function Layout({ children }) {
       <body className="min-h-screen flex flex-col bg-background text-foreground">
         <ThemeProvider>
           {/* Navigation Bar */}
-          <nav className="fixed top-0 left-1/2 transform -translate-x-1/2 z-50 flex flex-col space-y-4 p-4 bg-top-dark shadow-lg rounded-lg md:top-1/2 md:right-0 md:transform md:-translate-y-1/2 md:left-auto md:space-y-6">
+          <nav className="fixed top-0 left-0 right-0 z-50 flex flex-row justify-center space-x-6 p-4 bg-top-dark shadow-lg md:flex-col md:space-x-0 md:space-y-6 md:top-1/2 md:right-0 md:left-auto md:transform md:-translate-y-1/2 md:rounded-lg">
             <NavItem href="/" Icon={FaHome} label="Home" />
             <NavItem href="/me" Icon={FaUser} label="Me" />
             <NavItem href="/projects" Icon={FaLayerGroup} label="Projects" />
@@ -56,7 +56,7 @@ export default function Layout({ children }) {
                 <FaLinkedin size={24} />
               </a>
               <a
-                href="mailto:syandapalli@stanford.edu"
+                href="mailto:saisreenadh@stanford.edu"
                 className="hover:text-teal-400 dark:text-[#EAEAEA] transition-colors"
               >
                 <FaEnvelope size={24} />
@@ -76,7 +76,7 @@ function NavItem({ href, Icon, label }) {
   return (
     <a
       href={href}
-      className="relative flex items-center justify-center bg-card-bg rounded-lg p-4 shadow-md hover:scale-105 transition-transform md:space-x-3"
+      className="relative flex items-center justify-center bg-card-bg rounded-lg p-3 shadow-md hover:scale-105 transition-transform"
     >
       <Icon size={28} className="text-gray-800 dark:text-[#EAEAEA]" />
       {/* Hide text completely on mobile */}
