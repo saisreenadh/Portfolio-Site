@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import {
   FaGithub,
@@ -24,7 +25,7 @@ export default function Home() {
       <header className="flex items-center justify-center w-screen px-6 py-16 md:py-20 bg-top dark:bg-top-dark">
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
           {/* Profile Image */}
-          <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden shadow-md dark:shadow-lg">
+          <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden shadow-xl dark:shadow-[0_4px_6px_rgba(255,255,255,0.1)]">
             <Image
               src="/images/profile.jpg"
               alt="Sreenadh Yandapalli"
@@ -47,13 +48,13 @@ export default function Home() {
             <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-3 items-center mt-5">
               <a
                 href="/projects"
-                className="px-5 py-2 bg-gray-700 text-white dark:text-gray-300 rounded-lg shadow-md hover:bg-gray-800 transition-transform transform hover:scale-105"
+                className="px-5 py-2 bg-gray-700 text-white dark:text-gray-300 rounded-lg shadow-md dark:shadow-[0_4px_6px_rgba(255,255,255,0.1)] hover:bg-gray-800 transition-transform transform hover:scale-105"
               >
                 View Projects
               </a>
               <a
                 href="mailto:syandapalli89@gmail.com"
-                className="px-5 py-2 bg-gray-500 text-white dark:text-gray-300 rounded-lg shadow-md hover:bg-gray-600 transition-transform transform hover:scale-105"
+                className="px-5 py-2 bg-gray-500 text-white dark:text-gray-300 rounded-lg shadow-md dark:shadow-[0_4px_6px_rgba(255,255,255,0.1)] hover:bg-gray-600 transition-transform transform hover:scale-105"
               >
                 Contact Me
               </a>
@@ -112,7 +113,7 @@ export default function Home() {
 
 function SkillCard({ Icon, label, color }) {
   return (
-    <div className="group flex flex-col items-center bg-top dark:bg-top-dark p-4 rounded-lg shadow-md hover:shadow-lg transform transition-transform duration-300 ease-in-out hover:scale-105">
+    <div className="group flex flex-col items-center bg-top dark:bg-top-dark p-4 rounded-lg shadow-md dark:shadow-[0_4px_6px_rgba(255,255,255,0.1)] hover:shadow-lg dark:hover:shadow-[0_6px_8px_rgba(255,255,255,0.15)] transform transition-transform duration-300 ease-in-out hover:scale-105">
       <Icon size={32} className={`${color} group-hover:opacity-75`} />
       <span className="mt-2 text-xs font-medium text-gray-800 dark:text-gray-300">
         {label}

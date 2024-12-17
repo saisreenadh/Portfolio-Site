@@ -107,7 +107,8 @@ export default function Projects() {
             >
               <div
                 className="relative rounded-lg border-2 border-[#1C1C1E] dark:border-[#EAEAEB] bg-[#EAEAEB] dark:bg-[#1C1C1E] 
-                shadow-md transition-transform duration-300 transform group-hover:scale-105 group-hover:shadow-xl h-[22rem] flex flex-col p-6"
+                shadow-md dark:shadow-[0_6px_8px_rgba(255,255,255,0.1)] hover:shadow-lg dark:hover:shadow-[0_8px_10px_rgba(255,255,255,0.2)] 
+                transition-transform duration-300 transform group-hover:scale-105 h-[22rem] flex flex-col p-6"
               >
                 {/* In Progress Banner */}
                 {project.inProgress && (

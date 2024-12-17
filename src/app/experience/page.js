@@ -1,3 +1,5 @@
+"use client";
+
 export default function Experience() {
   const experiences = [
     {
@@ -65,34 +67,28 @@ export default function Experience() {
           {experiences.map((experience, index) => (
             <div
               key={index}
-              className="rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-[#E0E0E0] dark:bg-[#1E1E1E] border border-[#F5F5F5] dark:border-[#2B2B2B]"
+              className="rounded-lg shadow-lg dark:shadow-[0_6px_8px_rgba(255,255,255,0.1)] hover:shadow-xl dark:hover:shadow-[0_8px_10px_rgba(255,255,255,0.2)] transition-shadow duration-300 bg-[#E0E0E0] dark:bg-[#1E1E1E] border border-[#F5F5F5] dark:border-[#2B2B2B] p-6"
             >
-              <div className="p-6">
-                {/* Company Name */}
-                <h2 className="text-3xl font-bold text-gray-800 dark:text-[#D0D0D0]">
-                  {experience.company}
-                </h2>
-                <div className="mt-4 space-y-6">
-                  {experience.roles.map((role, i) => (
-                    <div
-                      key={i}
-                      className="group border-l-4 border-gray-500 dark:border-gray-300 pl-4 hover:bg-[#D9D9D9] dark:hover:bg-[#2A2A2A] rounded-md transition-all duration-300"
-                    >
-                      {/* Role Title */}
-                      <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-300 group-hover:text-gray-800 dark:group-hover:text-[#D0D0D0] transition-colors duration-300">
-                        {role.title}
-                      </h3>
-                      {/* Dates */}
-                      <p className="text-sm text-gray-500 dark:text-gray-400">
-                        {role.date}
-                      </p>
-                      {/* Description */}
-                      <p className="text-gray-600 dark:text-gray-400 mt-2">
-                        {role.description}
-                      </p>
-                    </div>
-                  ))}
-                </div>
+              {/* Company Name */}
+              <h2 className="text-3xl font-bold text-gray-800 dark:text-[#D0D0D0] mb-4">
+                {experience.company}
+              </h2>
+
+              <div className="space-y-6">
+                {experience.roles.map((role, i) => (
+                  <div key={i} className="group pl-4 border-l-4 border-gray-500 dark:border-gray-300">
+                    {/* Role Title */}
+                    <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-300">
+                      {role.title}
+                    </h3>
+                    {/* Dates */}
+                    <p className="text-sm text-gray-500 dark:text-gray-400">{role.date}</p>
+                    {/* Description */}
+                    <p className="text-gray-600 dark:text-gray-400 mt-2">
+                      {role.description}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           ))}
