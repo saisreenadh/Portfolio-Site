@@ -1,4 +1,5 @@
 import "./globals.css";
+import { ThemeProvider } from "./context/ThemeContext";
 import {
   FaHome,
   FaLayerGroup,
@@ -20,49 +21,54 @@ export default function Layout({ children }) {
   return (
     <html lang="en">
       <body className="min-h-screen flex flex-col bg-background text-foreground">
-        {/* Navigation Bar */}
-        <nav className="fixed md:top-1/2 md:right-6 md:transform md:-translate-y-1/2 z-50 flex justify-center md:justify-end">
-          <div className="flex flex-col items-center space-y-6 bg-[#E0E0E0] dark:bg-[#1E1E1E] bg-opacity-90 shadow-lg rounded-lg p-4">
-            <NavItem href="/" Icon={FaHome} label="Home" />
-            <NavItem href="/me" Icon={FaUser} label="Me" />
-            <NavItem href="/projects" Icon={FaLayerGroup} label="Projects" />
-            <NavItem href="/experience" Icon={FaBriefcase} label="Experience" />
-            <div className="flex items-center justify-center">
-              <ThemeToggle />
+        <ThemeProvider>
+          {/* Navigation Bar */}
+          <nav className="fixed md:top-1/2 md:right-6 md:transform md:-translate-y-1/2 z-50 flex justify-center md:justify-end">
+            <div className="flex flex-col items-center space-y-6 bg-top-dark shadow-lg rounded-lg p-4 bg-opacity-90">
+              <NavItem href="/" Icon={FaHome} label="Home" />
+              <NavItem href="/me" Icon={FaUser} label="Me" />
+              <NavItem href="/projects" Icon={FaLayerGroup} label="Projects" />
+              <NavItem href="/experience" Icon={FaBriefcase} label="Experience" />
+              <div className="flex items-center justify-center">
+                <ThemeToggle />
+              </div>
             </div>
-          </div>
-        </nav>
+          </nav>
 
-        {/* Page Content */}
-        <main className="flex-grow">{children}</main>
+          {/* Page Content */}
+          <main className="flex-grow">{children}</main>
 
-        {/* Footer */}
-        <footer className="bg-[#E0E0E0] dark:bg-[#1E1E1E] text-gray-800 dark:text-[#D0D0D0] py-8 text-center shadow-md">
-          <div className="flex justify-center space-x-6 mb-4">
-            <a
-              href="https://github.com/saisreenadh"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-teal-400"
-            >
-              <FaGithub size={24} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/sreenadh-yandapalli/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-teal-400"
-            >
-              <FaLinkedin size={24} />
-            </a>
-            <a href="mailto:syandapalli89@gmail.com" className="hover:text-teal-400">
-              <FaEnvelope size={24} />
-            </a>
-          </div>
-          <p className="text-sm">
-            © 2024 Saisreenadh Yandapalli. Built with ❤️ using Next.js and TailwindCSS.
-          </p>
-        </footer>
+          {/* Footer */}
+          <footer className="bg-top-dark text-gray-800 dark:text-textLightGrey py-8 text-center shadow-md">
+            <div className="flex justify-center space-x-6 mb-4">
+              <a
+                href="https://github.com/saisreenadh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-teal-400"
+              >
+                <FaGithub size={24} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/sreenadh-yandapalli/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-teal-400"
+              >
+                <FaLinkedin size={24} />
+              </a>
+              <a
+                href="mailto:syandapalli89@gmail.com"
+                className="hover:text-teal-400"
+              >
+                <FaEnvelope size={24} />
+              </a>
+            </div>
+            <p className="text-sm">
+              © 2024 Saisreenadh Yandapalli. Built with ❤️ using Next.js and TailwindCSS.
+            </p>
+          </footer>
+        </ThemeProvider>
       </body>
     </html>
   );

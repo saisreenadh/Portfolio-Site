@@ -34,7 +34,7 @@ body {
     background-color: var(--skills-dark);
   }
   .bg-bottom {
-    background-color: var(--bottom-dark);
+    background-color: var(--bottom-light);
   }
   .dark .bg-top {
     background-color: var(--top-dark);

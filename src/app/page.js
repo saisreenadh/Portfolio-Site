@@ -21,52 +21,53 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <header className="flex items-center justify-center w-screen px-6 py-24 md:py-28 bg-top dark:bg-top-dark">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16">
+      <header className="flex items-center justify-center w-screen px-6 py-16 md:py-20 bg-top dark:bg-top-dark">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
           {/* Profile Image */}
-          <div className="w-48 h-48 md:w-60 md:h-60 rounded-full overflow-hidden shadow-md dark:shadow-lg">
+          <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden shadow-md dark:shadow-lg">
             <Image
               src="/images/profile.jpg"
               alt="Sreenadh Yandapalli"
-              width={240}
-              height={240}
+              width={192}
+              height={192}
+              className="object-cover object-center w-full h-full"
             />
           </div>
 
           {/* Text Content */}
           <div className="text-center md:text-left">
-            <h1 className="text-3xl md:text-4xl font-bold text-foreground dark:text-gray-300">
+            <h1 className="text-2xl md:text-3xl font-bold text-foreground dark:text-gray-300">
               Saisreenadh (Sreenadh) Yandapalli
             </h1>
-            <p className="text-base md:text-lg text-gray-700 dark:text-gray-400 mt-4">
+            <p className="text-sm md:text-base text-gray-700 dark:text-gray-400 mt-3">
               Stanford CS & Psychology Student | Innovator | Problem Solver
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 items-center mt-6">
+            <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-3 items-center mt-5">
               <a
                 href="/projects"
-                className="px-6 py-2 bg-gray-700 text-white dark:text-gray-300 rounded-lg shadow-md hover:bg-gray-800 transition-transform transform hover:scale-105"
+                className="px-5 py-2 bg-gray-700 text-white dark:text-gray-300 rounded-lg shadow-md hover:bg-gray-800 transition-transform transform hover:scale-105"
               >
                 View Projects
               </a>
               <a
                 href="mailto:syandapalli89@gmail.com"
-                className="px-6 py-2 bg-gray-500 text-white dark:text-gray-300 rounded-lg shadow-md hover:bg-gray-600 transition-transform transform hover:scale-105"
+                className="px-5 py-2 bg-gray-500 text-white dark:text-gray-300 rounded-lg shadow-md hover:bg-gray-600 transition-transform transform hover:scale-105"
               >
                 Contact Me
               </a>
             </div>
 
             {/* Social Media Icons */}
-            <div className="flex justify-center md:justify-start space-x-6 mt-6">
+            <div className="flex justify-center md:justify-start space-x-5 mt-5">
               <a
                 href="https://github.com/saisreenadh"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-700 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-400 transition-colors"
               >
-                <FaGithub size={28} />
+                <FaGithub size={24} />
               </a>
               <a
                 href="https://www.linkedin.com/in/saisreenadh-yandapalli/"
@@ -74,13 +75,13 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="text-gray-700 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-400 transition-colors"
               >
-                <FaLinkedin size={28} />
+                <FaLinkedin size={24} />
               </a>
               <a
                 href="mailto:syandapalli89@gmail.com"
                 className="text-gray-700 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-400 transition-colors"
               >
-                <FaEnvelope size={28} />
+                <FaEnvelope size={24} />
               </a>
             </div>
           </div>
@@ -88,11 +89,11 @@ export default function Home() {
       </header>
 
       {/* Skills Section */}
-      <section className="py-16 px-4 bg-bottom dark:bg-bottom">
-        <h2 className="text-4xl font-bold text-center text-foreground dark:text-gray-300 mb-12">
+      <section className="py-12 px-4 bg-bottom dark:bg-bottom">
+        <h2 className="text-3xl font-bold text-center text-foreground dark:text-gray-300 mb-8">
           Skills & Tools
         </h2>
-        <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 text-center">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 text-center">
           <SkillCard Icon={FaPython} label="Python" color="text-teal-500" />
           <SkillCard Icon={SiJavascript} label="JavaScript" color="text-yellow-500" />
           <SkillCard Icon={FaJava} label="Java" color="text-red-500" />
@@ -111,9 +112,9 @@ export default function Home() {
 
 function SkillCard({ Icon, label, color }) {
   return (
-    <div className="group flex flex-col items-center bg-top dark:bg-top-dark p-5 rounded-lg shadow-md hover:shadow-lg transform transition-transform duration-300 ease-in-out hover:scale-105 dark:shadow-lg hover:shadow-xl dark:hover:shadow-2xl">
-      <Icon size={40} className={`${color} group-hover:opacity-75`} />
-      <span className="mt-2 text-sm font-medium text-gray-800 dark:text-gray-300">
+    <div className="group flex flex-col items-center bg-top dark:bg-top-dark p-4 rounded-lg shadow-md hover:shadow-lg transform transition-transform duration-300 ease-in-out hover:scale-105">
+      <Icon size={32} className={`${color} group-hover:opacity-75`} />
+      <span className="mt-2 text-xs font-medium text-gray-800 dark:text-gray-300">
         {label}
       </span>
     </div>
