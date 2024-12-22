@@ -14,12 +14,18 @@ import ThemeToggle from "./components/ThemeToggle";
 export const metadata = {
   title: "Saisreenadh Yandapalli | Website",
   description:
-    "Hi! I'm Saisreenadh (Sreenadh) Yandapalli, a Stanford CS student specializing in AI and Psychology. I'm passionate about leveraging technology to create meaningful impact!",
+    "Hi! I'm Saisreenadh (Sreenadh) Yandapalli, a Stanford CS & Psychology student specializing in AI. I'm passionate about leveraging technology to create meaningful impact!",
 };
 
 export default function Layout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* Corrected Favicon Path */}
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+      </head>
       <body className="min-h-screen flex flex-col bg-background text-foreground">
         <ThemeProvider>
           {/* Navigation Bar */}
