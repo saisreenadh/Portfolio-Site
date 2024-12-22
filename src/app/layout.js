@@ -24,7 +24,7 @@ export default function Layout({ children }) {
         <ThemeProvider>
           {/* Navigation Bar */}
           <nav
-            className="fixed top-0 left-0 right-0 z-50 flex flex-row justify-center space-x-4 p-3 bg-top-dark shadow-lg md:flex-col md:space-x-0 md:space-y-6 md:top-1/2 md:right-0 md:left-auto md:transform md:-translate-y-1/2 md:rounded-lg"
+            className="fixed top-0 left-0 right-0 z-50 flex flex-row justify-center space-x-3 sm:p-2 sm:space-x-2 bg-top-dark shadow-lg md:flex-col md:space-x-0 md:space-y-7 md:top-1/2 md:right-0 md:left-auto md:transform md:-translate-y-1/2 md:rounded-lg md:px-3 md:py-3"
           >
             <NavItem href="/" Icon={FaHome} label="Home" />
             <NavItem href="/me" Icon={FaUser} label="Me" />
@@ -58,7 +58,7 @@ export default function Layout({ children }) {
                 <FaLinkedin size={24} />
               </a>
               <a
-                href="mailto:saisreenadh@stanford.edu"
+                href="mailto:syandapalli@stanford.edu"
                 className="hover:text-teal-400 dark:text-[#EAEAEA] transition-colors"
               >
                 <FaEnvelope size={24} />
@@ -78,11 +78,11 @@ function NavItem({ href, Icon, label }) {
   return (
     <a
       href={href}
-      className="relative group flex items-center justify-center bg-card-bg rounded-lg p-3 md:p-4 shadow-md hover:scale-105 transition-transform"
+      className="relative group flex items-center justify-center bg-card-bg rounded-lg sm:p-2 md:p-4 shadow-md hover:scale-105 transition-transform"
     >
       {/* Icon Size Adjusted */}
       <Icon
-        size={20} // Mobile icon size
+        size={18} // Smaller icon size for mobile
         className="text-gray-800 dark:text-[#EAEAEA] md:size-[28px]" // Larger icon on desktop
       />
       {/* Text appears only on desktop when hovering */}
