@@ -14,7 +14,7 @@ export default function About() {
         <div className="bg-[#E0E0E0] dark:bg-[#1E1E1E] rounded-lg shadow-md dark:shadow-[0_6px_8px_rgba(255,255,255,0.15)] p-8 space-y-6 text-gray-800 dark:text-[#D0D0D0]">
           {/* Introduction */}
           <p className="text-lg leading-relaxed">
-            Hi, I'm <span className="font-bold">Sreenadh (shree-nod)</span>! I'm a Stanford student double majoring in
+            Hi, I'm <span className="font-bold">Sreenadh (shree-nod)</span>! I'm a Stanford student majoring in
             <span className="font-bold"> Computer Science</span> with a specialization in <span className="font-bold">AI</span>.
           </p>
 
