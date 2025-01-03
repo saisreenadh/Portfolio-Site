@@ -15,7 +15,7 @@ export default function About() {
           {/* Introduction */}
           <p className="text-lg leading-relaxed">
             Hi, I'm <span className="font-bold">Sreenadh (shree-nod)</span>! I'm a Stanford student double majoring in
-            <span className="font-bold"> Computer Science</span> with a concentration in <span className="font-bold">AI & Psychology</span>.
+            <span className="font-bold"> Computer Science</span> with a specialization in <span className="font-bold">AI</span>.
           </p>
 
           {/* Section 1 */}
@@ -29,13 +29,13 @@ export default function About() {
           {/* Section 2 */}
           <p className="text-lg leading-relaxed">
             I've interned at <span className="font-bold">Locbit Inc.</span>, where I developed APIs and optimized IoT strategies, and at
-            <span className="font-bold"> EssayPlan AI</span>, where I contributed to scalable algorithms and robust testing frameworks.
+            <span className="font-bold"> CollegePlan AI</span>, where I contributed to scalable algorithms and robust testing frameworks.
           </p>
 
           {/* Section 3 */}
           <p className="text-lg leading-relaxed">
-            I’ve worked on projects at the intersection of <span className="font-bold">AI, IoT, and education</span>. I aim to leverage my combined interests in
-            <span className="font-bold"> psychology and computer science</span> to gain a deeper understanding of human behavior and apply that knowledge to create innovative and impactful solutions.
+            I’ve worked on projects at the intersection of <span className="font-bold">AI, IoT, and education</span>. I aim to leverage my interest in
+            <span className="font-bold"> computer science</span> to create innovative and impactful solutions.
           </p>
         </div>
 

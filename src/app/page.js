@@ -41,7 +41,7 @@ export default function Home() {
               Saisreenadh (Sreenadh) Yandapalli
             </h1>
             <p className="text-sm md:text-base text-gray-700 dark:text-gray-400 mt-3">
-              Stanford Computer Science & Psychology Student | Full Stack Developer | Wordle Fanatic
+              Stanford Computer Science (AI) Student | Full Stack Developer | Wordle Fanatic
             </p>
 
             {/* Buttons */}
@@ -71,7 +71,7 @@ export default function Home() {
                 <FaGithub size={24} />
               </a>
               <a
-                href="https://www.linkedin.com/in/saisreenadh-yandapalli/"
+                href="https://www.linkedin.com/in/sreenadh-yandapalli/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-700 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-400 transition-colors"

@@ -20,7 +20,7 @@ export default function Experience() {
       ],
     },
     {
-      company: "EssayPlan AI",
+      company: "CollegePlan AI",
       roles: [
         {
           title: "Software Engineer Intern",
